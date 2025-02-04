@@ -1,6 +1,6 @@
 {
   "name": "content-types-lite",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A collection of common CONTENT types for use in applications.",
   "type": "module",
   "main": "build/index.js",
