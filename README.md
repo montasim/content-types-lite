@@ -44,26 +44,31 @@ npm install content-types-lite
 
 ## Usage
 
-### 1. Importing the Constants
+### CommonJS
 
-```typescript
-import contentTypesLite from 'content-types-lite';
+```javascript
+const contentTypesLite = require('content-types-lite');
 
 console.log(contentTypesLite.JSON); // Outputs: application/json
 ```
 
-### 2. TypeScript Support
+### Module (ESM)
 
-```typescript
+```javascript
+import contentTypesLite from 'content-types-lite';
+
+console.log(contentTypesLite.JSON); // Outputs: application/json
+
+// TypeScript example:
 import contentTypesLite, { ContentType } from 'content-types-lite';
 
 const fileType: ContentType = 'JSON';
 console.log(contentTypesLite[fileType]); // Outputs: application/json
 ```
 
-### 3. Example Usage in an Express.js Application
+### Example Usage in an Express.js Application (ESM)
 
-```typescript
+```javascript
 import contentTypesLite from 'content-types-lite';
 import express from 'express';
 
