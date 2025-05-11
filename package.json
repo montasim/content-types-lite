@@ -5,6 +5,13 @@
   "type": "module",
   "main": "./build/cjs/index.cjs",
   "module": "./build/esm/index.js",
+  "types": "./build/esm/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./build/esm/index.js",
+      "require": "./build/cjs/index.cjs"
+    }
+  },
   "engines": {
     "node": ">=23.x",
     "npm": ">=10.x"
@@ -87,7 +94,7 @@
     "README.md"
   ],
   "scripts": {
-    "build": "eslint . --fix && prettier . --write && tsc && node scripts/compress.js",
+    "build": "eslint . --fix && prettier . --write && tsc --build && node scripts/compress.js",
     "test": "jest",
     "eslint:check": "eslint .",
     "eslint:fix": "eslint . --fix",
