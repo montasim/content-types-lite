@@ -1,6 +1,6 @@
 {
   "name": "content-types-lite",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A collection of common CONTENT types for use in applications.",
   "type": "module",
   "main": "./dist/cjs/index.cjs",

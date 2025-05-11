@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.1](https://github.com/montasim/content-types-lite/compare/v0.2.0...v0.2.1) (2025-05-11)
+
+
+### Bug Fixes
+
+* build issue ([6e326b5](https://github.com/montasim/content-types-lite/commit/6e326b535e700dfd98e54d42d08480d446ce8990))
+
+
+### Code Refactoring
+
+* remove package-lock.json ([b2695a8](https://github.com/montasim/content-types-lite/commit/b2695a89e30b965d8d827ec9e8a6129adbe0bec6))
+
 ## [0.2.0](https://github.com/montasim/content-types-lite/compare/v0.1.4...v0.2.0) (2025-05-11)
 
 
