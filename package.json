@@ -3,15 +3,19 @@
   "version": "0.2.0",
   "description": "A collection of common CONTENT types for use in applications.",
   "type": "module",
-  "main": "./build/cjs/index.cjs",
-  "module": "./build/esm/index.js",
-  "types": "./build/esm/index.d.ts",
+  "main": "./dist/cjs/index.cjs",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
   "exports": {
     ".": {
-      "import": "./build/esm/index.js",
-      "require": "./build/cjs/index.cjs"
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.cjs"
     }
   },
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "engines": {
     "node": ">=23.x",
     "npm": ">=10.x"
@@ -89,10 +93,6 @@
   "publishConfig": {
     "access": "public"
   },
-  "files": [
-    "build",
-    "README.md"
-  ],
   "scripts": {
     "build": "eslint . --fix && prettier . --write && tsc --build && node scripts/compress.js",
     "test": "jest",
