@@ -40,11 +40,29 @@ To install the package, run the following command:
 npm install content-types-lite
 ```
 
+or
+
+```bash
+yarn add content-types-lite
+```
+
+or
+
+```bash
+pnpm add content-types-lite
+```
+
+or
+
+```bash
+bun add content-types-lite
+```
+
 ---
 
 ## Usage
 
-### CommonJS
+### JavaScript CommonJS Example
 
 ```javascript
 const contentTypesLite = require('content-types-lite');
@@ -52,34 +70,26 @@ const contentTypesLite = require('content-types-lite');
 console.log(contentTypesLite.JSON); // Outputs: application/json
 ```
 
-### Module (ESM)
+### JavaScript ESM Example
 
 ```javascript
 import contentTypesLite from 'content-types-lite';
 
 console.log(contentTypesLite.JSON); // Outputs: application/json
 
-// TypeScript example:
-import contentTypesLite, { ContentType } from 'content-types-lite';
-
-const fileType: ContentType = 'JSON';
+const fileType = 'JSON';
 console.log(contentTypesLite[fileType]); // Outputs: application/json
 ```
 
-### Example Usage in an Express.js Application (ESM)
+### TypeScript ESM Example
 
-```javascript
-import contentTypesLite from 'content-types-lite';
-import express from 'express';
+```typescript
+import contentTypesLite, { ContentType } from 'content-types-lite';
 
-const app = express();
+console.log(contentTypesLite.JSON); // Outputs: application/json
 
-app.get('/file', (req, res) => {
-    res.setHeader('Content-Type', contentTypesLite.PDF);
-    res.send('This is a PDF response');
-});
-
-app.listen(3000, () => console.log('Server running on port 3000'));
+const fileType: ContentType = 'JSON';
+console.log(contentTypesLite[fileType]); // Outputs: application/json
 ```
 
 ---
@@ -195,6 +205,24 @@ You can remove the package by running:
 npm uninstall content-types-lite
 ```
 
+or
+
+```bash
+yarn remove content-types-lite
+```
+
+or
+
+```bash
+pnpm remove content-types-lite
+```
+
+or
+
+```bash
+bun remove content-types-lite
+```
+
 ---
 
 ## Author
@@ -206,7 +234,7 @@ npm uninstall content-types-lite
       <a href="https://github.com/montasim">
         <br>
           Ｍ♢ＮＴΛＳＩＭ
-        </br>
+        <br>
       </a>
     </td>
   </tr>

@@ -1,36 +1,18 @@
-import { ContentType } from '../src';
-
-/**
- * @fileoverview Unit tests for the contentTypesLite module.
- * These tests ensure that all content types are correctly defined, immutable, and return expected values.
- * It also validates the TypeScript types and checks that invalid keys are not allowed.
- *
- * @module test/contentTypesLite.test
- * @version 1.1.0
- * @license CC BY-NC-ND 4.0
- *
- * @contact Mohammad Montasim -Al- Mamun Shuvo
- * @created 2025-01-29
- * @contactEmail montasimmamun@gmail.com
- * @contactGithub https://github.com/montasim
- */
-
-// eslint-disable-next-line @typescript-eslint/no-require-imports
-const contentTypesLite = require('../src/index.cjs');
+import contentTypesLite, { ContentType } from '../src/index';
 
 describe('contentTypesLite', () => {
     /**
-     * Test to ensure the contentTypesLite object is defined and frozen.
+     * Ensures the content types module is defined and immutable.
      */
     it('should be defined and frozen', () => {
         expect(contentTypesLite).toBeDefined();
-        expect(Object.isFrozen(contentTypesLite)).toBe(true);
+        expect(Object.isFrozen(contentTypesLite)).toBe(true); // Ensures the object is immutable
     });
 
     /**
-     * Test to ensure correct content types for text-based formats.
+     * Verifies correct MIME types for text-based content.
      */
-    it('should return correct content types for text-based formats', () => {
+    it('should return correct MIME types for text-based content', () => {
         expect(contentTypesLite.PLAIN_TEXT).toBe('text/plain');
         expect(contentTypesLite.HTML).toBe('text/html');
         expect(contentTypesLite.CSS).toBe('text/css');
@@ -38,13 +20,12 @@ describe('contentTypesLite', () => {
         expect(contentTypesLite.XML).toBe('text/xml');
         expect(contentTypesLite.MARKDOWN).toBe('text/markdown');
         expect(contentTypesLite.RICH_TEXT).toBe('text/richtext');
-        expect(contentTypesLite.EVENT_STREAM).toBe('text/event-stream');
     });
 
     /**
-     * Test to ensure correct content types for structured data formats.
+     * Verifies correct MIME types for structured data formats.
      */
-    it('should return correct content types for structured data formats', () => {
+    it('should return correct MIME types for structured data formats', () => {
         expect(contentTypesLite.JSON).toBe('application/json');
         expect(contentTypesLite.XML_APP).toBe('application/xml');
         expect(contentTypesLite.YAML).toBe('application/x-yaml');
@@ -57,9 +38,9 @@ describe('contentTypesLite', () => {
     });
 
     /**
-     * Test to ensure correct content types for multipart and form data.
+     * Verifies correct MIME types for multipart & form data.
      */
-    it('should return correct content types for multipart and form data', () => {
+    it('should return correct MIME types for multipart & form data', () => {
         expect(contentTypesLite.MULTIPART_FORM_DATA).toBe(
             'multipart/form-data'
         );
@@ -76,9 +57,9 @@ describe('contentTypesLite', () => {
     });
 
     /**
-     * Test to ensure correct content types for binary and file upload formats.
+     * Verifies correct MIME types for binary & file upload content types.
      */
-    it('should return correct content types for binary and file upload formats', () => {
+    it('should return correct MIME types for binary & file upload content types', () => {
         expect(contentTypesLite.OCTET_STREAM).toBe('application/octet-stream');
         expect(contentTypesLite.PDF).toBe('application/pdf');
         expect(contentTypesLite.ZIP).toBe('application/zip');
@@ -100,9 +81,9 @@ describe('contentTypesLite', () => {
     });
 
     /**
-     * Test to ensure correct content types for media formats.
+     * Verifies correct MIME types for media content types.
      */
-    it('should return correct content types for media formats', () => {
+    it('should return correct MIME types for media content types', () => {
         expect(contentTypesLite.GIF).toBe('image/gif');
         expect(contentTypesLite.PNG).toBe('image/png');
         expect(contentTypesLite.JPEG).toBe('image/jpeg');
@@ -113,19 +94,21 @@ describe('contentTypesLite', () => {
     });
 
     /**
-     * Test to ensure correct content types for streaming and event formats.
+     * Verifies correct MIME types for streaming & event content types.
      */
-    it('should return correct content types for streaming and event formats', () => {
+    it('should return correct MIME types for streaming & event content types', () => {
+        expect(contentTypesLite.EVENT_STREAM).toBe('text/event-stream');
         expect(contentTypesLite.TAR).toBe('application/x-tar');
         expect(contentTypesLite.BZIP2).toBe('application/x-bzip2');
     });
 
     /**
-     * Test to ensure only valid keys are allowed as ContentType type.
+     * Validates that only valid keys are allowed as ContentType type.
+     * Ensures TypeScript type safety for valid and invalid keys.
      */
     it('should allow only valid keys as ContentType type', () => {
-        const validContentType: ContentType = 'JSON';
-        expect(contentTypesLite[validContentType]).toBe('application/json');
+        const validContentType: ContentType = 'PDF';
+        expect(contentTypesLite[validContentType]).toBe('application/pdf');
 
         // @ts-expect-error This should throw a TypeScript error during compilation
         const invalidContentType: ContentType = 'INVALID';
@@ -134,7 +117,7 @@ describe('contentTypesLite', () => {
     });
 
     /**
-     * Test to match snapshot for the entire constants object.
+     * Creates a snapshot of the entire content types object for consistency checks.
      */
     it('should match snapshot for the entire constants object', () => {
         expect(contentTypesLite).toMatchSnapshot();

@@ -1,20 +1,4 @@
 /**
- * @fileoverview Defines the various content types used in the application.
- * This module exports an object that contains different content types
- * the application commonly handles. These content types are used to
- * specify the nature of the content being transmitted.
- *
- * @module constants/contentTypesLite.ts
- * @version 1.2.0
- * @license CC BY-NC-ND 4.0
- *
- * @contact Mohammad Montasim -Al- Mamun Shuvo
- * @created 2025-01-29
- * @contactEmail montasimmamun@gmail.com
- * @contactGithub https://github.com/montasim
- */
-
-/**
  * An object representing different content types.
  * @enum {string}
  */
