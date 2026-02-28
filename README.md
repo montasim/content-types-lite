@@ -10,6 +10,8 @@
 
 The [content-types-lite](https://www.npmjs.com/package/content-types-lite) is a lightweight and structured utility providing standardized content types (MIME types) for various applications. It simplifies content type handling by offering predefined constants, ensuring consistency in file processing, API responses, and HTTP headers.
 
+**[🌐 View Demo](https://content-types-lite-demo.netlify.app/)**
+
 ## Table of Contents
 
 - [Key Features](#key-features)
