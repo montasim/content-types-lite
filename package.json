@@ -1,5 +1,5 @@
 {
-  "name": "mime-types-lite",
+  "name": "content-types-lite",
   "version": "1.7.5",
   "description": "A collection of common MIME types for use in applications.",
   "engines": {
@@ -99,12 +99,12 @@
   "license": "CC BY-NC-ND 4.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/montasim/mime-types-lite.git"
+    "url": "git+https://github.com/montasim/content-types-lite.git"
   },
   "bugs": {
-    "url": "https://github.com/montasim/mime-types-lite/issues"
+    "url": "https://github.com/montasim/content-types-lite/issues"
   },
-  "homepage": "https://github.com/montasim/mime-types-lite",
+  "homepage": "https://github.com/montasim/content-types-lite",
   "publishConfig": {
     "access": "public"
   },
