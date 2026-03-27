@@ -1,0 +1,102 @@
+{
+    "name": "content-types-lite",
+    "version": "2.0.0",
+    "description": "A lightweight, immutable collection of common MIME types for TypeScript and JavaScript applications",
+    "type": "module",
+    "main": "./dist/index.cjs",
+    "module": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "import": {
+                "types": "./dist/index.d.ts",
+                "default": "./dist/index.js"
+            },
+            "require": {
+                "types": "./dist/index.d.ts",
+                "default": "./dist/index.cjs"
+            }
+        }
+    },
+    "files": [
+        "dist",
+        "README.md",
+        "LICENSE"
+    ],
+    "scripts": {
+        "build": "tsup",
+        "dev": "tsup --watch",
+        "test": "npm run build && node --test test/index.test.js",
+        "prepublishOnly": "npm run build && npm test",
+        "lint": "eslint .",
+        "lint:fix": "eslint . --fix",
+        "format": "prettier --check .",
+        "format:fix": "prettier --write .",
+        "commit": "git-cz",
+        "prepare": "husky",
+        "release": "standard-version"
+    },
+    "keywords": [
+        "content types",
+        "content-types",
+        "MIME types",
+        "media types",
+        "file types",
+        "content type constants",
+        "HTTP content types",
+        "TypeScript content types",
+        "JavaScript content types",
+        "immutable content types",
+        "lightweight",
+        "content-types-lite",
+        "typescript",
+        "utility",
+        "library"
+    ],
+    "author": {
+        "name": "Mohammad Montasim -Al- Mamun Shuvo",
+        "portfolio": "https://montasim-dev.web.app/",
+        "contact": {
+            "email": "montasimmamun@gmail.com",
+            "mobile": "+8801722815469"
+        },
+        "social": {
+            "linkedIn": "https://www.linkedin.com/in/montasim",
+            "gitHub": "https://github.com/montasim"
+        }
+    },
+    "license": "CC-BY-NC-ND-4.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/montasim/content-types-lite.git"
+    },
+    "bugs": {
+        "url": "https://github.com/montasim/content-types-lite/issues"
+    },
+    "homepage": "https://github.com/montasim/content-types-lite#readme",
+    "demo": "https://content-types-lite-demo.netlify.app/",
+    "devDependencies": {
+        "@commitlint/cli": "20.5.0",
+        "@commitlint/config-conventional": "20.5.0",
+        "@typescript-eslint/eslint-plugin": "^8.0.0",
+        "@typescript-eslint/parser": "^8.0.0",
+        "commitizen": "4.3.1",
+        "cz-conventional-changelog": "^3.3.0",
+        "eslint": "10.1.0",
+        "eslint-config-prettier": "10.1.8",
+        "eslint-plugin-eslint-comments": "^3.2.0",
+        "eslint-plugin-prettier": "5.5.5",
+        "husky": "^9.0.0",
+        "lint-staged": "16.4.0",
+        "prettier": "^3.0.0",
+        "standard-version": "9.5.0",
+        "tsup": "^8.0.0",
+        "typescript": "^5.3.0",
+        "typescript-eslint": "8.57.2"
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    }
+}
